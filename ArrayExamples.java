@@ -6,10 +6,16 @@ public class ArrayExamples {
   static void reverseInPlace(int[] arr) {
     int[] Array2 = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-      Array2[i] = arr[arr.length - i - 1];
+      Array2[i] = arr[i];
     }
-    arr = Array2;
-  }
+    
+    for(int i = 0; i < arr.length; i += 1)
+    {
+      arr[i] = Array2[arr.length - i - 1];
+    }
+    
+    }
+
 
   // Returns a *new* array with all the elements of the input array in reversed
   // order
